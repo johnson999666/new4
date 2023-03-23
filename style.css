@@ -1,0 +1,61 @@
+body {
+    background-color: rgb(179, 177, 202);
+}
+
+
+.skills {
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    background-color: red;
+    color: black;
+}
+
+.first {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.title-master {
+    display: flex;
+    justify-content: center;
+    
+
+}
+#title {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+#title2 {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+#title3 {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
+.sparkle {
+    position: relative;
+    display: inline-block;
+    animation: sparkle 1s infinite;
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
