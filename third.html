@@ -126,11 +126,18 @@
     }
   }
  
+  
   #spin-scale {
-    animation: spin-scale 1s ease-in-out forwards;
     transform: scale(0);
   }
-  
+
+  .my-animation {
+    animation: spin-scale 1s ease-in-out forwards;
+    opacity: 1;
+    transform: scale(0);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+
   @keyframes spin-scale {
     0% {
       transform: scale(0);
@@ -142,10 +149,10 @@
       transform: scale(1) rotate(720deg);
     }
   }
+  
 </style>
 
 
-     
           
          
           
@@ -161,11 +168,32 @@
             <div class="children" id="my-text">Python is a popular high-level programming language known for its simplicity and ease of use. Its vast array of libraries and frameworks makes it suitable for various tasks, including web development, data analysis, scientific computing, and artificial intelligence.</div>
             <div class="children" id="pulse">Python is a popular high-level programming language known for its simplicity and ease of use. Its vast array of libraries and frameworks makes it suitable for various tasks, including web development, data analysis, scientific computing, and artificial intelligence.</div>
             <div class="children" id="spin-scale">Python is a popular high-level programming language known for its simplicity and ease of use. Its vast array of libraries and frameworks makes it suitable for various tasks, including web development, data analysis, scientific computing, and artificial intelligence.</div>
+
+
+
+
             <div class="children">Python is a popular high-level programming language known for its simplicity and ease of use. Its vast array of libraries and frameworks makes it suitable for various tasks, including web development, data analysis, scientific computing, and artificial intelligence.</div>
             <div class="children">Python is a popular high-level programming language known for its simplicity and ease of use. Its vast array of libraries and frameworks makes it suitable for various tasks, including web development, data analysis, scientific computing, and artificial intelligence.</div>
             <div class="children">Python is a popular high-level programming language known for its simplicity and ease of use. Its vast array of libraries and frameworks makes it suitable for various tasks, including web development, data analysis, scientific computing, and artificial intelligence.</div>
             
         </div>
+        <script>
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('my-animation');
+              } else {
+                entry.target.classList.remove('my-animation');
+              }
+            });
+          });
+        
+          const element = document.getElementById('spin-scale');
+          observer.observe(element);
+        </script>
+        
+        
+             
         <script>
             // Get the text element
             const text = document.getElementById('my-text');
