@@ -33,7 +33,7 @@ body {
 }
 #title3 {
     
-    font-family: 'Parisienne', cursive;
+    font-family: 'Ubuntu Mono', monospace;
 }
 
 
@@ -52,11 +52,8 @@ body {
 
 
   .awesome-heading {
-    font-size: 5rem;
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(to bottom right, #ed254e, #f9dc5c);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 5rem; font-weight: bold; color: #333; text-align: center;
+    
     text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
   }
   
@@ -66,5 +63,42 @@ body {
     
 
 }
-
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+  }
+  
+  .slide {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+  }
+  
 
