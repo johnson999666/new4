@@ -94,23 +94,92 @@
             }
           </style>
           
+          <style>
+            .blur {
+              filter: blur(5px);
+              transition: filter 1s ease-in-out;
+            }
+
+            @keyframes typing {
+    from {
+      width: 0
+    }
+  
+    to {
+      width: 100%
+    }
+  }
+ 
+  #pulse {
+    animation: pulse 1s ease-out infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+ 
+  #spin-scale {
+    animation: spin-scale 1s ease-in-out forwards;
+    transform: scale(0);
+  }
+  
+  @keyframes spin-scale {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.2) rotate(360deg);
+    }
+    100% {
+      transform: scale(1) rotate(720deg);
+    }
+  }
+</style>
+
+
+     
           
+         
           
-        
+         
+           
+          
+         
           
 
         <div class="main">
             <div class="children" id="child1" class="typing"></div>
             <div class="children" id="spin">Python is a popular high-level programming language known for its simplicity and ease of use. Its vast array of libraries and frameworks makes it suitable for various tasks, including web development, data analysis, scientific computing, and artificial intelligence.</div>
-            <div class="children">Python is a popular high-level programming language known for its simplicity and ease of use. Its vast array of libraries and frameworks makes it suitable for various tasks, including web development, data analysis, scientific computing, and artificial intelligence.</div>
-            <div class="children">Python is a popular high-level programming language known for its simplicity and ease of use. Its vast array of libraries and frameworks makes it suitable for various tasks, including web development, data analysis, scientific computing, and artificial intelligence.</div>
-            <div class="children">Python is a popular high-level programming language known for its simplicity and ease of use. Its vast array of libraries and frameworks makes it suitable for various tasks, including web development, data analysis, scientific computing, and artificial intelligence.</div>
+            <div class="children" id="my-text">Python is a popular high-level programming language known for its simplicity and ease of use. Its vast array of libraries and frameworks makes it suitable for various tasks, including web development, data analysis, scientific computing, and artificial intelligence.</div>
+            <div class="children" id="pulse">Python is a popular high-level programming language known for its simplicity and ease of use. Its vast array of libraries and frameworks makes it suitable for various tasks, including web development, data analysis, scientific computing, and artificial intelligence.</div>
+            <div class="children" id="spin-scale">Python is a popular high-level programming language known for its simplicity and ease of use. Its vast array of libraries and frameworks makes it suitable for various tasks, including web development, data analysis, scientific computing, and artificial intelligence.</div>
             <div class="children">Python is a popular high-level programming language known for its simplicity and ease of use. Its vast array of libraries and frameworks makes it suitable for various tasks, including web development, data analysis, scientific computing, and artificial intelligence.</div>
             <div class="children">Python is a popular high-level programming language known for its simplicity and ease of use. Its vast array of libraries and frameworks makes it suitable for various tasks, including web development, data analysis, scientific computing, and artificial intelligence.</div>
             <div class="children">Python is a popular high-level programming language known for its simplicity and ease of use. Its vast array of libraries and frameworks makes it suitable for various tasks, including web development, data analysis, scientific computing, and artificial intelligence.</div>
             
         </div>
-        
+        <script>
+            // Get the text element
+            const text = document.getElementById('my-text');
+            
+            // Set a timer to add the blur class after 4 seconds
+            setTimeout(() => {
+              text.classList.add('blur');
+            }, 4000);
+            
+            // Set a timer to remove the blur class after 8 seconds
+            setTimeout(() => {
+              text.classList.remove('blur');
+            }, 8000);
+          </script>
 
   <script>
     const words = ["Python ", "is ", "a ", "popular ", "high-level ", "programming ", "language ", "known ", "for ", "its ", "simplicity ", "and ", "ease ", "of ", "use. ", "Its ", "vast ", "array ", "of ", "libraries ", "and ", "frameworks ", "make ", "it ", "suitable ", "for ", "various ", "tasks."];
